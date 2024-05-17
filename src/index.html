@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark px-5">
+      <div class="container-fluid">
+        <a class="navbar-brand text-white" href="#"
+          ><img src="/logo.png" width="90" height="25" alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                href="#"
+                tabindex="-1"
+                aria-disabled="true"
+                >Princing</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">About</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn text-dark bg-warning" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- BOTONES -->
+
+    <div
+      class="btn-group m-3"
+      role="group"
+      aria-label="Basic radio toggle button group"
+    >
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        id="btnradio1"
+        autocomplete="off"
+        checked
+      />
+      <label class="btn" for="btnradio1">
+        <img src="/layout-grid.svg" width="24" height="24" alt="" />
+      </label>
+
+      <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        id="btnradio2"
+        autocomplete="off"
+      />
+      <label class="btn" for="btnradio2">
+        <img src="/layout-list.svg" width="24" height="24" alt="" />
+      </label>
+    </div>
+
+    <!-- <div class="card-group row mx-3">
+      <div class="col-sm-3">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://picsum.photos/seed/picsum/200/300"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://picsum.photos/seed/picsum/200/300"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://picsum.photos/seed/picsum/200/300"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://picsum.photos/seed/picsum/200/300"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- GRID DE PELICULAS -->
+    <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5">
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5">
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5">
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img
+            src="https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">
+              This is a longer card with supporting text below as a natural
+              lead-in to additional content. This content is a little bit
+              longer.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--FOOTER  -->
+
+    <!-- <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-dark"> -->
+    <div
+      class="container-fluid fixed-bottom d-flex justify-content-between align-items-center bg-dark"
+    >
+      <p class="text-white mb-0">@ 2023 Company Inc</p>
+      <a class="navbar-brand text-white" href="#"
+        ><img src="/logo.png" width="90" height="25" alt=""
+      /></a>
+
+      <!-- <ul class="me-auto mb-2 mb-lg-0">
+
+          <li class="nav-item">
+            <a class="nav-link active text-white" aria-current="page" href="#"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link text-white"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Princing</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">FAQs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">About</a>
+          </li>
+        </ul> -->
+      <ul class="list-group list-group-horizontal bg-dark">
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href="">Home</a>
+        </li>
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href=""
+            >Features</a
+          >
+        </li>
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href=""
+            >Pricing</a
+          >
+        </li>
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href="">FAQs</a>
+        </li>
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href="">About</a>
+        </li>
+      </ul>
+    </div>
+    <!-- </nav> -->
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
