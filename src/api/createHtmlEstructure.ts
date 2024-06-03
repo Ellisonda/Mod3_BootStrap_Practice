@@ -2,6 +2,10 @@
 
 //Creamos la estructura html del grid
 
+
+import { MovieListType } from "../models/movie-type";
+import { setCurrentListType } from "../movie/movie";
+
 //PREGUNTAS: 
 // -1. ¿Solo necesito crear una row padre, con sus caracteristicas, y ya con añadir cada card
 // se van haciendo wrap de manera infinita? ¿O debo crear otra cada 4 cards?
@@ -12,10 +16,6 @@ export function createRows() {
     const createRow = document.createElement('div');
     createRow.className= 'row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5';
     appElem.appendChild(createRow);
-
-    
-    
-    
 }
 
 export function createCardsHTML() {
@@ -50,3 +50,4 @@ export function createCardsHTML() {
     cardElem.appendChild(cardTextElem);
 
 }
+

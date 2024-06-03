@@ -1,11 +1,19 @@
 import "./scss/styles.scss";
-import {createCardsHTML, createRows} from './api/createHtmlEstructure';
+import {addEventListenerGridBtn, addEventListenerListBtn, addEventListenerSelect} from './events/events';
+import { createCardsHTML, createRows} from './api/createHtmlEstructure'
+
+import { firstLoading } from "./movie/movie";
 
 
 
-async function start () {
+ function start () {
     createRows();
     createCardsHTML();
+    addEventListenerSelect();
+    addEventListenerGridBtn();
+    addEventListenerListBtn();
+
+    firstLoading();
 }
 
 start();
