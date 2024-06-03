@@ -70,7 +70,7 @@
       </div>
     </nav>
     <!-- BOTONES -->
-
+    <div class="selectors_container d-flex me-1 justify-content-between align-items-center bg-light">
     <div
       class="btn-group m-3"
       role="group"
@@ -98,8 +98,19 @@
       <label class="btn" for="btnradio2">
         <img src="/layout-list.svg" width="24" height="24" alt="" />
       </label>
-    </div>
 
+     
+    </div>
+    <select class="form-select form-select-lg w-auto m-1 h-25 " aria-label="Default select example">
+      <option selected value="now_playing">Now playin</option>
+      <option value="popular">Popular</option>
+      <option value="top_rated">Top Rated</option>
+      <option value="upcoming">Upcoming</option>
+    </select>
+    <!-- <div class="container-select">
+      
+    </div> -->
+  </div>
     <!-- <div class="card-group row mx-3">
       <div class="col-sm-3">
         <div class="card" style="width: 18rem">
@@ -164,7 +175,8 @@
     </div> -->
 
     <!-- GRID DE PELICULAS -->
-    <div class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5">
+  <div id="app">
+    <!-- <div  class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5">
       <div class="col">
         <div class="card h-100">
           <img
@@ -372,7 +384,8 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+  </div>    
     <!--FOOTER  -->
 
     <!-- <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-dark"> -->
@@ -410,29 +423,29 @@
             <a class="nav-link text-white" href="#">About</a>
           </li>
         </ul> -->
-      <ul class="list-group list-group-horizontal bg-dark">
-        <li class="list-group-item bg-dark border-dark">
-          <a style="text-decoration: none" class="text-white" href="">Home</a>
-        </li>
-        <li class="list-group-item bg-dark border-dark">
-          <a style="text-decoration: none" class="text-white" href=""
-            >Features</a
-          >
-        </li>
-        <li class="list-group-item bg-dark border-dark">
-          <a style="text-decoration: none" class="text-white" href=""
-            >Pricing</a
-          >
-        </li>
-        <li class="list-group-item bg-dark border-dark">
-          <a style="text-decoration: none" class="text-white" href="">FAQs</a>
-        </li>
-        <li class="list-group-item bg-dark border-dark">
-          <a style="text-decoration: none" class="text-white" href="">About</a>
-        </li>
-      </ul>
+        <ul class="list-group list-group-horizontal bg-dark">
+          <li class="list-group-item bg-dark border-dark">
+            <a style="text-decoration: none" class="text-white" href="">Home</a>
+          </li>
+          <li class="list-group-item bg-dark border-dark">
+            <a style="text-decoration: none" class="text-white" href=""
+              >Features</a
+            >
+          </li>
+          <li class="list-group-item bg-dark border-dark">
+            <a style="text-decoration: none" class="text-white" href=""
+              >Pricing</a
+            >
+          </li>
+          <li class="list-group-item bg-dark border-dark">
+            <a style="text-decoration: none" class="text-white" href="">FAQs</a>
+          </li>
+          <li class="list-group-item bg-dark border-dark">
+            <a style="text-decoration: none" class="text-white" href="">About</a>
+          </li>
+        </ul>
     </div>
     <!-- </nav> -->
-    <script type="module" src="index.js"></script>
+    <script type="module" src="index.ts"></script>
   </body>
 </html>
