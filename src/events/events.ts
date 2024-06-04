@@ -1,4 +1,4 @@
-import { MovieListType } from "../models/movie-type";
+import { MovieListType } from "../models/movie-type.enum";
 import { setCurrentListType } from "../movie/movie";
 
 
@@ -10,7 +10,8 @@ export function addEventListenerSelect() {
     const selectElem = document.querySelector('.form-select');
     selectElem?.addEventListener('change', (event:Event)=>{
         const selectElement= event.target as HTMLSelectElement;
-        // console.log("Movie list type change!", selectElement?.value)
+        // console.log("Movie list type change!", selectElement?.value) 
+        //Esto que hacemos aquí se llama casting. Usamos el as para forzar el tipado, para q sea como MovieListType
         setCurrentListType(selectElement.value as MovieListType);
     });
 }

@@ -3,7 +3,7 @@
 //Creamos la estructura html del grid
 
 
-import { MovieListType } from "../models/movie-type";
+import { MovieListType } from "../models/movie-type.enum";
 import { setCurrentListType } from "../movie/movie";
 
 //PREGUNTAS: 
@@ -18,7 +18,7 @@ export function createRows() {
     appElem.appendChild(createRow);
 }
 
-export function createCardsHTML() {
+export function createMovieGridElement() {
     const rowElem = document.querySelector('.row');
     if(rowElem === null) throw new Error('app is not defined');
     const colElem = document.createElement('div');
@@ -51,3 +51,45 @@ export function createCardsHTML() {
 
 }
 
+
+
+export function creaMovieListElement() {
+    const appElem = document.getElementById('app');
+    if(appElem === null) throw new Error('app is not defined');
+
+    const cardElem = document.createElement('div');
+    if(cardElem === null) throw new Error('card is not defined');
+   
+    cardElem.classList.add('card');
+    appElem.appendChild(cardElem);
+
+    const rowElem = document.createElement('div');
+    rowElem.className= 'row no-gutters';
+    cardElem.appendChild(rowElem);
+    const colImgElem = document.createElement('div');
+    colImgElem.className= 'col-md-4';
+    rowElem.appendChild(colImgElem);
+    // cardElem.addEventListener('click', eventHandler);
+
+    const imgElem = document.createElement('img');
+    imgElem.classList.add('card-img');
+    imgElem.setAttribute('data-test-id', '');
+    imgElem.setAttribute('src', 'https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU');
+    colImgElem.appendChild(imgElem);
+
+    const colBodyElem = document.createElement('div');
+    colBodyElem.className= 'col-md-8';
+    rowElem.appendChild(colBodyElem); 
+
+    const cardBodyElem = document.createElement('div');
+    cardBodyElem.classList.add('card-body');
+    colBodyElem.appendChild(cardBodyElem);
+
+    const titleElem = document.createElement('h5');
+    titleElem.classList.add('card-title');
+    cardBodyElem.appendChild(titleElem);
+
+    const cardTextElem = document.createElement('p');
+    cardTextElem.classList.add('card-text');
+    cardElem.appendChild(cardTextElem);
+}

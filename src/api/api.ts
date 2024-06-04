@@ -1,4 +1,4 @@
-import { MovieListType } from "../models/movie-type";
+import { MovieListType } from "../models/movie-type.enum";
 import { movieMapper } from "./movieDataMapper";
 
 
