@@ -1,19 +1,19 @@
 import "./scss/styles.scss";
 import {addEventListenerGridBtn, addEventListenerListBtn, addEventListenerSelect} from './events/events';
-import { createMovieGridElement, creaMovieListElement, createRows} from './api/createHtmlEstructure'
+import { createGridElement } from './api/create-html-structure'
 
-import { firstLoading, showMovieList } from "./movie/movie";
+import { firstLoading} from "./movie/movie";
 
 
 
  function start () {
-    createRows();
-    createMovieGridElement();
+    
+    createGridElement();
     addEventListenerSelect();
     addEventListenerGridBtn();
     addEventListenerListBtn();
-    // showMovieList();
-    // firstLoading();
+   
+    firstLoading();
 }
 
 start();

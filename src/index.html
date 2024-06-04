@@ -70,38 +70,42 @@
       </div>
     </nav>
     <!-- BOTONES -->
-    <div class="selectors_container d-flex me-1 justify-content-between align-items-center bg-light">
     <div
-      class="btn-group m-3"
-      role="group"
-      aria-label="Basic radio toggle button group"
+      class="selectors_container d-flex me-1 justify-content-between align-items-center bg-light"
     >
-      <input
-        type="radio"
-        class="btn-check"
-        name="btnradio"
-        id="btngrid"
-        autocomplete="off"
-        checked
-      />
-      <label class="btn" for="btnradio1">
-        <img src="/layout-grid.svg" width="24" height="24" alt="" />
-      </label>
+      <div
+        class="toolbar-buttons m-3 d-flex justify-content-between align-items-center"
+      >
+        <button type="button" class="btn" id="btn-grid">
+          <!-- <label class="btn" for="layout-grid"> -->
+          <img src="layout-grid.svg" width="44" height="44" alt="" />
+          <!-- </label> -->
+        </button>
 
-      <input
-        type="radio"
-        class="btn-check"
-        name="btnradio"
-        id="btnlist"
-        autocomplete="off"
-      />
-      <label class="btn" for="btnradio2">
-        <img src="/layout-list.svg" width="24" height="24" alt="" />
-      </label>
-
-     
-    </div>
-      <select id="selector" class="form-select form-select-lg w-auto m-1 h-25 " aria-label="Default select example">
+        <button type="button" class="btn" id="btn-list">
+          <!-- <label class="btn" for="layout-list"> -->
+          <img src="layout-list.svg" width="44" height="44" alt="" />
+          <!-- </label> -->
+        </button>
+      </div>
+      <!-- <div class="mb-3 d-flex justify-content-between align-items-center">
+        <div class="toolbar-buttons d-flex">
+          <button id="btn-grid-mode" class="btn">
+            <label class="btn" for="layout-grid">
+              <img src="layout-grid.svg" alt="" />
+            </label>
+          </button>
+          <button id="btn-list-mode" class="btn">
+            <label class="btn" for="layout-list">
+              <img src="layout-list.svg" alt="" />
+            </label>
+          </button>
+        </div> -->
+      <select
+        id="selector"
+        class="form-select form-select-lg w-auto m-1 h-25"
+        aria-label="Default select example"
+      >
         <option selected value="now_playing">Now playin</option>
         <option value="popular">Popular</option>
         <option value="top_rated">Top Rated</option>
@@ -175,8 +179,8 @@
     </div> -->
 
     <!-- GRID DE PELICULAS -->
-  <div id="app">
-    <!-- <div  class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5">
+    <div id="app">
+      <!-- <div  class="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5">
       <div class="col">
         <div class="card h-100">
           <img
@@ -385,7 +389,7 @@
         </div>
       </div>
     </div> -->
-  </div>    
+    </div>
     <!--FOOTER  -->
 
     <!-- <nav class="navbar fixed-bottom navbar-expand-lg navbar-light bg-dark"> -->
@@ -423,27 +427,27 @@
             <a class="nav-link text-white" href="#">About</a>
           </li>
         </ul> -->
-        <ul class="list-group list-group-horizontal bg-dark">
-          <li class="list-group-item bg-dark border-dark">
-            <a style="text-decoration: none" class="text-white" href="">Home</a>
-          </li>
-          <li class="list-group-item bg-dark border-dark">
-            <a style="text-decoration: none" class="text-white" href=""
-              >Features</a
-            >
-          </li>
-          <li class="list-group-item bg-dark border-dark">
-            <a style="text-decoration: none" class="text-white" href=""
-              >Pricing</a
-            >
-          </li>
-          <li class="list-group-item bg-dark border-dark">
-            <a style="text-decoration: none" class="text-white" href="">FAQs</a>
-          </li>
-          <li class="list-group-item bg-dark border-dark">
-            <a style="text-decoration: none" class="text-white" href="">About</a>
-          </li>
-        </ul>
+      <ul class="list-group list-group-horizontal bg-dark">
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href="">Home</a>
+        </li>
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href=""
+            >Features</a
+          >
+        </li>
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href=""
+            >Pricing</a
+          >
+        </li>
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href="">FAQs</a>
+        </li>
+        <li class="list-group-item bg-dark border-dark">
+          <a style="text-decoration: none" class="text-white" href="">About</a>
+        </li>
+      </ul>
     </div>
     <!-- </nav> -->
     <script type="module" src="index.ts"></script>

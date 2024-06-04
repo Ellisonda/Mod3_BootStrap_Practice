@@ -3,38 +3,44 @@
 //Creamos la estructura html del grid
 
 
+import { MovieListData } from "../models/movie-list-data.interface";
 import { MovieListType } from "../models/movie-type.enum";
 import { setCurrentListType } from "../movie/movie";
 
 //PREGUNTAS: 
 // -1. ¿Solo necesito crear una row padre, con sus caracteristicas, y ya con añadir cada card
 // se van haciendo wrap de manera infinita? ¿O debo crear otra cada 4 cards?
-export function createRows() {
+// export function createRows() {
     
-    const appElem = document.getElementById('app');
-    if(appElem === null) throw new Error('app is not defined');
-    const createRow = document.createElement('div');
-    createRow.className= 'row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4 mx-5 pb-5';
-    appElem.appendChild(createRow);
+    
+// }
+
+export function createGridElement(movieListData: MovieListData[]): HTMLElement {
+    const rowElem = document.createElement('div');
+    rowElem.className= 'row';
+    
+    movieListData.forEach((movie)=>{
+      const movieElem = createMovieGridElement(movie);
+      rowElem.appendChild(movieElem);
+    });
+    return rowElem;
 }
 
-export function createMovieGridElement() {
-    const rowElem = document.querySelector('.row');
-    if(rowElem === null) throw new Error('app is not defined');
+function createMovieGridElement(movieListData: MovieListData) {
     const colElem = document.createElement('div');
-    colElem.classList.add('col');
-    rowElem.appendChild(colElem);
+    colElem.className='col col-md-3';
+    
 
     const cardElem = document.createElement('div');
     cardElem.className= 'card h-100';
     colElem.appendChild(cardElem);
 
-    // cardElem.addEventListener('click', eventHandler);
+    // TODO cardElem.addEventListener('click', eventHandler);
 
     const imgElem = document.createElement('img');
     imgElem.classList.add('card-img-top');
     imgElem.setAttribute('data-test-id', '');
-    imgElem.setAttribute('src', 'https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU');
+    imgElem.setAttribute('src', movieListData.poster);
     cardElem.appendChild(imgElem);
 
     const cardBodyElem = document.createElement('div');
@@ -49,23 +55,28 @@ export function createMovieGridElement() {
     cardTextElem.classList.add('card-text');
     cardElem.appendChild(cardTextElem);
 
+    return colElem;
+
 }
 
-
-
-export function creaMovieListElement() {
-    const appElem = document.getElementById('app');
-    if(appElem === null) throw new Error('app is not defined');
-
+export function createListElement(movieListData: MovieListData[]): HTMLElement {
     const cardElem = document.createElement('div');
-    if(cardElem === null) throw new Error('card is not defined');
-   
     cardElem.classList.add('card');
-    appElem.appendChild(cardElem);
+    
+    movieListData.forEach((movie)=>{
+        const movieElem = createMovieListElem(movie);
+        cardElem.appendChild(movieElem);
+      });
+    
+      return cardElem;
+}
 
+function createMovieListElem(movieListData: MovieListData) {
+   
+    
     const rowElem = document.createElement('div');
     rowElem.className= 'row no-gutters';
-    cardElem.appendChild(rowElem);
+    // cardElem.appendChild(rowElem);
     const colImgElem = document.createElement('div');
     colImgElem.className= 'col-md-4';
     rowElem.appendChild(colImgElem);
@@ -74,7 +85,7 @@ export function creaMovieListElement() {
     const imgElem = document.createElement('img');
     imgElem.classList.add('card-img');
     imgElem.setAttribute('data-test-id', '');
-    imgElem.setAttribute('src', 'https://fastly.picsum.photos/id/952/150/200.jpg?hmac=HJ08qVvA2MGOjTdu6JDTP4RMa32BCNpmdtHNZdiU1oU');
+    imgElem.setAttribute('src', movieListData.poster);
     colImgElem.appendChild(imgElem);
 
     const colBodyElem = document.createElement('div');
@@ -91,5 +102,8 @@ export function creaMovieListElement() {
 
     const cardTextElem = document.createElement('p');
     cardTextElem.classList.add('card-text');
-    cardElem.appendChild(cardTextElem);
+    cardBodyElem.appendChild(cardTextElem);
+    
+    return rowElem;
+
 }

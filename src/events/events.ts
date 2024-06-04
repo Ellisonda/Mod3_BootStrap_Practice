@@ -19,7 +19,7 @@ export function addEventListenerSelect() {
 
 
 export function addEventListenerGridBtn() {
-    const elem: HTMLElement | null = document.getElementById("btngrid");
+    const elem: HTMLElement | null = document.getElementById("btn-grid");
     if(elem===null)throw new Error ('El button element id does not exist.');
     elem?.addEventListener('click', (event: Event)=>{
         console.log('Button grid mode clicked')
@@ -29,7 +29,7 @@ export function addEventListenerGridBtn() {
 }
 
 export function addEventListenerListBtn() {
-    const elem: HTMLElement | null = document.getElementById("btnlist");
+    const elem: HTMLElement | null = document.getElementById("btn-list");
     if(elem===null)throw new Error ('El button element id does not exist.');
     elem?.addEventListener('click', (event: Event)=>{
         console.log('Button list mode clicked')

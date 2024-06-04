@@ -1,9 +1,9 @@
 
 
 export interface MovieListData {
-    id: number;
+    id: string;
     title: string;
-    description: string;
+    overview: string;
     rate: number;
     year: number;
     poster: string;

@@ -1,5 +1,5 @@
 import { MovieListType } from "../models/movie-type.enum";
-import { movieMapper } from "./movieDataMapper";
+import { movieMapper } from "./movies.mapper";
 
 
 export function config() {
@@ -20,15 +20,13 @@ export function getMovieListUrl(config, type: MovieListType, page = 1) {
     return url
 };
 
- export async function getMovieList() {
-    try {
+ export async function fetchMovieListData(type: MovieListType) {
+    
     const apiConfig = config();
-    const url = getMovieListUrl(apiConfig, MovieListType.NowPlaying);
+    const url = getMovieListUrl(apiConfig, type);
     const response = await fetch(url);
     const data = await response.json();
-    const movies: any [] = data?.result?? [];
+    const movies: any [] = data?.results ?? [];
       return movies.map((movie)=>movieMapper(movie));
-    }catch(error) {
-        console.error('Something went wrong', error)
-    }
+    
 }
