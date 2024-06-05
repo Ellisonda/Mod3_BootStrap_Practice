@@ -45,15 +45,36 @@ export function getMovieDetailsUrl(config: Apiconfig, movieId: number) {
 }
 
 
-// export async function fetchMovieDetailsData(movieId: number): Promise<MovieDetailsData> {
+export async function fetchMovieDetailsData(idMovie: number): Promise<MovieDetailsData> {
     
-//     const apiConfig = config();
-//     const url = getMovieDetailsUrl(apiConfig, movieId);
+    const apiConfig = config();
+    const url = getMovieDetailsUrl(apiConfig, idMovie);
+    const response = await fetch(url);
+    const data = await response.json();
+    const movies: any  = data?.results ?? [];
+      return movies.map((movie)=>movieDetailsMapper(movie));
+    
+}
+
+// export async function fecthSearchMovie(query: string) {
+//     if(query?.length > 0){
+
+//         const url = getMovieDetailsUrl(apiConfig, movieId);
 //     const response = await fetch(url);
 //     const data = await response.json();
 //     const movies: any [] = data?.results ?? [];
-//       return movies.map((movie)=>movieDetailsMapper(movie));
+
+//     }
     
 // }
 
+// funtion getSearchMovieUrl(config:Apiconfig, query){
+//     let url= config.baseUrl;
+//     url += `/search/movie`;
+//     url +=
+//     url += `?language=${config.langIso}`;
+//     url += `&api_key=${config.apiKey}`;
+//     url += `&append_to_response=credits`;
+//     return url
+// }
 

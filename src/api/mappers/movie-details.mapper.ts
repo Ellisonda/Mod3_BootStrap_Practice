@@ -13,12 +13,13 @@ export function movieDetailsMapper(data: any): MovieDetailsData{
         id: id ?? -1,
         title: title??defaultValue,
         director: director ?? defaultValue,
-        description: overview ?? defaultValue,
+        overview: overview ?? defaultValue,
         rate:vote_average ?? defaultValue,
         year: Number(release_date.split('-').join() ?? -1),
         poster: poster_path ?? defaultValue,
         cast: cast?? defaultValue,
         crew: crew?? defaultValue,
+        backdrop:poster_path
     };
 }
 

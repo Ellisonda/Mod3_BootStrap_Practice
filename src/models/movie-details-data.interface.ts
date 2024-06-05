@@ -1,11 +1,12 @@
 export interface MovieDetailsData {
-    id: number;
+    id: string;
     title: string;
-    description: string;
+    overview: string;
     rate: number;
     crew: string[];
-    cast: string[],
+    cast: string[];
     director: string;
     year: number;
     poster: string;
+    backdrop: string;
 }

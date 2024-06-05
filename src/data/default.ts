@@ -6,3 +6,6 @@
 // }
 export const baseUrlImg= "https://media.themoviedb.org/t/p/w220_and_h330_face";
 export const defaultValue = '(not defined)';
+export const appElem = document.getElementById('app');
+
+//TODO function to get the appelem
