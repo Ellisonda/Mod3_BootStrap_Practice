@@ -18,6 +18,6 @@ export function movieMapper(data: any): MovieListData{
         overview: overview ?? defaultValue,
         rate:vote_average ?? defaultValue,
         year: Number(release_date.split('-').join() ?? -1),
-        poster: poster_path
-    }
+        poster: poster_path ?? defaultValue
+    };
 }

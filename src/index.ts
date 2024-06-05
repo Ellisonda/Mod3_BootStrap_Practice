@@ -3,12 +3,13 @@ import {addEventListenerGridBtn, addEventListenerListBtn, addEventListenerSelect
 import { createGridElement } from './api/create-html-structure'
 
 import { firstLoading} from "./movie/movie";
+import { fetchMovieListData } from "./api/api";
 
 
 
  function start () {
     
-    createGridElement();
+    // createGridElement();
     addEventListenerSelect();
     addEventListenerGridBtn();
     addEventListenerListBtn();

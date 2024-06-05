@@ -3,17 +3,13 @@
 //Creamos la estructura html del grid
 
 
+import { baseUrlImg } from "../data/default";
 import { MovieListData } from "../models/movie-list-data.interface";
 import { MovieListType } from "../models/movie-type.enum";
 import { setCurrentListType } from "../movie/movie";
+import { getMovieListUrl } from "./api";
 
-//PREGUNTAS: 
-// -1. ¿Solo necesito crear una row padre, con sus caracteristicas, y ya con añadir cada card
-// se van haciendo wrap de manera infinita? ¿O debo crear otra cada 4 cards?
-// export function createRows() {
-    
-    
-// }
+
 
 export function createGridElement(movieListData: MovieListData[]): HTMLElement {
     const rowElem = document.createElement('div');
@@ -26,7 +22,7 @@ export function createGridElement(movieListData: MovieListData[]): HTMLElement {
     return rowElem;
 }
 
-function createMovieGridElement(movieListData: MovieListData) {
+function createMovieGridElement(movie: MovieListData) {
     const colElem = document.createElement('div');
     colElem.className='col col-md-3';
     
@@ -40,7 +36,7 @@ function createMovieGridElement(movieListData: MovieListData) {
     const imgElem = document.createElement('img');
     imgElem.classList.add('card-img-top');
     imgElem.setAttribute('data-test-id', '');
-    imgElem.setAttribute('src', movieListData.poster);
+    imgElem.setAttribute('src', baseUrlImg+movie.poster);
     cardElem.appendChild(imgElem);
 
     const cardBodyElem = document.createElement('div');
@@ -84,7 +80,7 @@ function createMovieListElem(movieListData: MovieListData) {
 
     const imgElem = document.createElement('img');
     imgElem.classList.add('card-img');
-    imgElem.setAttribute('data-test-id', '');
+    imgElem.setAttribute('data-test-id', movieListData.id);
     imgElem.setAttribute('src', movieListData.poster);
     colImgElem.appendChild(imgElem);
 
@@ -98,6 +94,7 @@ function createMovieListElem(movieListData: MovieListData) {
 
     const titleElem = document.createElement('h5');
     titleElem.classList.add('card-title');
+    titleElem.textContent= movieListData.title;
     cardBodyElem.appendChild(titleElem);
 
     const cardTextElem = document.createElement('p');

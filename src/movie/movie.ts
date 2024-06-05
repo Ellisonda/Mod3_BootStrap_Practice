@@ -1,7 +1,7 @@
 
 
 import { fetchMovieListData } from "../api/api";
-import { createMovieListElement, createMovieGridElement, createGridElement, createListElement } from "../api/create-html-structure";
+import {  createGridElement, createListElement } from "../api/create-html-structure";
 import { MovieLayoutMode } from "../models/movie-layout-mode.enum";
 import { MovieListData } from "../models/movie-list-data.interface";
 import { MovieListType } from "../models/movie-type.enum";

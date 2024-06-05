@@ -1,4 +1,7 @@
+import { Apiconfig } from "../models/api-config.interface";
+import { MovieDetailsData } from "../models/movie-details-data.interface";
 import { MovieListType } from "../models/movie-type.enum";
+import { movieDetailsMapper } from "./mappers/movie-details.mapper";
 import { movieMapper } from "./movies.mapper";
 
 
@@ -11,7 +14,7 @@ export function config() {
 };
 
 
-export function getMovieListUrl(config, type: MovieListType, page = 1) {
+export function getMovieListUrl(config: Apiconfig, type: MovieListType, page = 1) {
     let url= config.baseUrl;
     url += `movie/${type}`;
     url += `?language=${config.langIso}`;
@@ -19,6 +22,16 @@ export function getMovieListUrl(config, type: MovieListType, page = 1) {
     url += `&api_key=${config.apiKey}`;
     return url
 };
+
+export function getMovieDetailsUrl(config: Apiconfig, movieId: number) {
+    let url= config.baseUrl;
+    url += `movie/${movieId}`;
+    url += `?language=${config.langIso}`;
+    url += `&api_key=${config.apiKey}`;
+    url += `&append_to_response=credits`;
+    return url
+};
+
 
  export async function fetchMovieListData(type: MovieListType) {
     
@@ -30,3 +43,17 @@ export function getMovieListUrl(config, type: MovieListType, page = 1) {
       return movies.map((movie)=>movieMapper(movie));
     
 }
+
+
+// export async function fetchMovieDetailsData(movieId: number): Promise<MovieDetailsData> {
+    
+//     const apiConfig = config();
+//     const url = getMovieDetailsUrl(apiConfig, movieId);
+//     const response = await fetch(url);
+//     const data = await response.json();
+//     const movies: any [] = data?.results ?? [];
+//       return movies.map((movie)=>movieDetailsMapper(movie));
+    
+// }
+
+
