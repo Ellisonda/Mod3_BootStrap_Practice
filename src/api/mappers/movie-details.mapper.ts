@@ -1,4 +1,4 @@
-import { defaultValue } from "../../data/default";
+import { baseUrlImg, defaultValue } from "../../data/default";
 import { MovieDetailsData } from "../../models/movie-details-data.interface";
 import { MovieListData } from "../../models/movie-list-data.interface";
 
@@ -16,7 +16,7 @@ export function movieDetailsMapper(data: any): MovieDetailsData{
         overview: overview ?? defaultValue,
         rate:vote_average ?? defaultValue,
         year: Number(release_date.split('-').join() ?? -1),
-        poster: poster_path ?? defaultValue,
+        poster: baseUrlImg+poster_path ?? defaultValue,
         cast: movieCastMapper(credits?.cast?? defaultValue),
         crew: movieCrewMapper(credits?.crew?? defaultValue),
         backdrop:poster_path

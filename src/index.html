@@ -57,12 +57,13 @@
           </ul>
           <form class="d-flex">
             <input
+              id="search-input"
               class="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-            <button class="btn text-dark bg-warning" type="submit">
+            <button id="search-btn" class="btn text-dark bg-warning" type="submit">
               Search
             </button>
           </form>
@@ -70,47 +71,47 @@
       </div>
     </nav>
     <!-- BOTONES -->
-    <div
-      class="selectors_container d-flex me-1 justify-content-between align-items-center bg-light"
-    >
+    <div id="list-toolbar" class="container toolbar">
       <div
-        class="toolbar-buttons m-3 d-flex justify-content-between align-items-center"
+        class="selectors_container d-flex me-1 justify-content-between align-items-center bg-light"
       >
-        <button type="button" class="btn" id="btn-grid">
-          <!-- <label class="btn" for="layout-grid"> -->
-          <img src="layout-grid.svg" width="44" height="44" alt="" />
-          <!-- </label> -->
-        </button>
+        <div
+          class="toolbar-buttons m-3 d-flex justify-content-between align-items-center"
+        >
+          <button type="button" class="btn" id="btn-grid">
+            <img src="layout-grid.svg" width="44" height="44" alt="" />
+          </button>
 
-        <button type="button" class="btn" id="btn-list">
-          <!-- <label class="btn" for="layout-list"> -->
-          <img src="layout-list.svg" width="44" height="44" alt="" />
-          <!-- </label> -->
-        </button>
+          <button type="button" class="btn" id="btn-list">
+            <img src="layout-list.svg" width="44" height="44" alt="" />
+          </button>
+        </div>
+
+        <select
+          id="selector"
+          class="form-select form-select-lg w-auto m-1 h-25"
+          aria-label="Default select example"
+        >
+          <option selected value="now_playing">Now playin</option>
+          <option value="popular">Popular</option>
+          <option value="top_rated">Top Rated</option>
+          <option value="upcoming">Upcoming</option>
+        </select>
       </div>
-      <!-- <div class="mb-3 d-flex justify-content-between align-items-center">
-        <div class="toolbar-buttons d-flex">
-          <button id="btn-grid-mode" class="btn">
-            <label class="btn" for="layout-grid">
-              <img src="layout-grid.svg" alt="" />
-            </label>
-          </button>
-          <button id="btn-list-mode" class="btn">
-            <label class="btn" for="layout-list">
-              <img src="layout-list.svg" alt="" />
-            </label>
-          </button>
-        </div> -->
-      <select
-        id="selector"
-        class="form-select form-select-lg w-auto m-1 h-25"
-        aria-label="Default select example"
+    </div>
+
+    <div id="details-toolbar" class="container toolbar" hidden>
+      <div
+        class="selectors_container d-flex me-1 justify-content-between align-items-center bg-light"
       >
-        <option selected value="now_playing">Now playin</option>
-        <option value="popular">Popular</option>
-        <option value="top_rated">Top Rated</option>
-        <option value="upcoming">Upcoming</option>
-      </select>
+        <div
+          class="toolbar-buttons m-3 d-flex justify-content-between align-items-center"
+        >
+          <button id="btn-chevron" type="button" class="btn" id="btn-grid">
+            <img src="chevron.svg" width="44" height="44" alt="" />
+          </button>
+        </div>
+      </div>
     </div>
     <!-- <div class="container-select">
       

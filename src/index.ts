@@ -1,5 +1,5 @@
 import "./scss/styles.scss";
-import {addEvenListenerDetailsCard, addEventListenerGridBtn, addEventListenerListBtn, addEventListenerSelect} from './events/events';
+import {addEvenListenerListCard, addEventListenerBackDetailsBtn, addEventListenerGridBtn, addEventListenerListBtn, addEventListenerSearchBtn, addEventListenerSelect} from './events/events';
 import { createGridElement } from './api/create-html-structure'
 
 import { firstLoading} from "./movie/movie";
@@ -10,11 +10,12 @@ import { fetchMovieListData } from "./api/api";
  function start () {
     
     // createGridElement();
-    addEvenListenerDetailsCard();
+    addEvenListenerListCard();
     addEventListenerSelect();
     addEventListenerGridBtn();
     addEventListenerListBtn();
-   
+    addEventListenerBackDetailsBtn();
+    addEventListenerSearchBtn();
     firstLoading();
 }
 

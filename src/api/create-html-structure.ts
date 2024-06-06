@@ -4,7 +4,7 @@
 
 
 import { appElem, baseUrlImg } from "../data/default";
-import { addEvenListenerDetailsCard } from "../events/events";
+import { addEvenListenerListCard } from "../events/events";
 import { MovieDetailsData } from "../models";
 import { MovieListData } from "../models/movie-list-data.interface";
 import { MovieListType } from "../models/movie-type.enum";
@@ -124,7 +124,7 @@ export function createDetailsHtmlStructure(movie: MovieDetailsData): HTMLElement
 
     const imgElem = document.createElement('img');
     imgElem.classList.add('card-img');
-    imgElem.setAttribute('data-test-id', movie.id);
+    
     imgElem.setAttribute('src', movie.poster);
     divImgElem.appendChild(imgElem);
 
@@ -133,12 +133,12 @@ export function createDetailsHtmlStructure(movie: MovieDetailsData): HTMLElement
     containerElem.appendChild(divInfoElem);
 
     const titleElem = document.createElement('h5');
-    titleElem.classList.add('');
+    titleElem.classList.add('title');
     titleElem.textContent= movie.title;
     divInfoElem.appendChild(titleElem);
 
     const yearElem = document.createElement('h4');
-    yearElem.classList.add('');
+    yearElem.classList.add('year');
     yearElem.textContent= `${movie.year}`;
     divInfoElem.appendChild(titleElem);
 
@@ -146,6 +146,8 @@ export function createDetailsHtmlStructure(movie: MovieDetailsData): HTMLElement
     overviewElem.classList.add('card-text');
     overviewElem.textContent= movie.overview;
     divInfoElem.appendChild(overviewElem);
+
+    
 
     return containerElem;
 }
