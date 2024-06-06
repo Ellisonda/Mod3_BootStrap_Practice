@@ -11,9 +11,9 @@ import { MovieListType } from "../models/movie-type.enum";
 import { setCurrentListType } from "../movie/movie";
 import { getMovieListUrl } from "./api";
 
-export function eventListenerDetails () {
-    appElem?.addEventListener('click', addEvenListenerDetailsCard);
-}
+// export function eventListenerDetails () {
+//     appElem?.addEventListener('click', addEvenListenerDetailsCard);
+// }
 
 
 export function createGridElement(movieListData: MovieListData[]): HTMLElement {

@@ -8,7 +8,7 @@ import { MovieListData } from "../../models/movie-list-data.interface";
 
 
 export function movieDetailsMapper(data: any): MovieDetailsData{
-    const {id, title, director, overview, vote_average, release_date, poster_path, cast, crew}= data;
+    const {id, title, director, overview, vote_average, release_date, poster_path, credits}= data;
     return {
         id: id ?? -1,
         title: title??defaultValue,
@@ -17,23 +17,25 @@ export function movieDetailsMapper(data: any): MovieDetailsData{
         rate:vote_average ?? defaultValue,
         year: Number(release_date.split('-').join() ?? -1),
         poster: poster_path ?? defaultValue,
-        cast: cast?? defaultValue,
-        crew: crew?? defaultValue,
+        cast: movieCastMapper(credits?.cast?? defaultValue),
+        crew: movieCrewMapper(credits?.crew?? defaultValue),
         backdrop:poster_path
     };
 }
 
 
-// export function movieDetailsMappper(): MovieDetailsData {
-//     return {
-//         // id,
-//         // title,
-//         // cast: movieCastMapper(credits.cast)
-//     }
-// }
 
-// function movieCastMapper(cast: any) {
 
-// }
+function movieCastMapper(cast: any[]) {
+    return cast.map((actor)=>{
+        const {id, name, character, profile_path: profile}= actor;
+        return {id, name, character, profile};
+    });
+}
 
-//todo MovieDetailsCastData
+function movieCrewMapper(crew: any[]) {
+    return crew.map((member)=>{
+        const {id, name, character, profile_path: profile}= member;
+        return {id, name, character, profile};
+});
+}

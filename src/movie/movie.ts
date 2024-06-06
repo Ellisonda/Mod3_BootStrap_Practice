@@ -14,6 +14,7 @@ let currentListType = MovieListType.NowPlaying; //por defecto en cartelera
 let currentListMode = MovieLayoutMode.Grid; ///por defecti grid
 let currentMovieListData: MovieListData[];
 let currentMovieDetailsData: MovieDetailsData[];
+let currentId: MovieDetailsData;
  
 export async function firstLoading() {
     currentMovieListData =  await fetchMovieListData(currentListType);
@@ -48,11 +49,21 @@ export function showMovieList(movieListData: MovieListData[]) {
 }
 
 
+export async function setCurrentId(newValue: MovieDetailsData) {
+    currentId = newValue;
+    // fetch de nuevo del listado de peliculas
+    currentMovieListData =  await fetchMovieListData(currentListType);
+    //voy a api, monto una config con la url, bla bla bla
+    showMovieList(currentMovieListData)
+
+}
 
 
+export async function showMovieDetails(movieId: number, movieDetailsData: MovieDetailsData[]) {
+    console.log('showMoviesDetails', movieDetailsData);
 
-export function showMovieDetails(movieId: MovieDetailsData) {
-    movieId
+    currentMovieDetailsData =  await fetchMovieDetailsData(movieId);
+
     const movieDetailsElem= createDetailsHtmlStructure(currentMovieDetailsData);
 
     appElem?.appendChild(movieDetailsElem)

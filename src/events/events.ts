@@ -55,13 +55,19 @@ export function addEvenListenerDetailsCard(){
     elem?.addEventListener('click', (event: Event) => {
         if(appElem) appElem.innerHTML= '';
         const idElement= event.target as HTMLElement;
-        if(idElement != undefined || idElement != null){
-           const idMovie = idElement.getAttribute('data-test-id');
-           console.log(idMovie);
-            fetchMovieDetailsData(idMovie);
-        }else{
-            return ''
-        }
+        const idMovie = idElement.getAttribute('data-test-id');
+
+        if(idMovie===null)throw new Error ('El id no es válido.');
+        fetchMovieDetailsData(+idMovie);
+        // const idElement= event.target as HTMLElement;
+        // if(idElement !== undefined || idElement !== null){
+        //    const idMovie = idElement.getAttribute('data-test-id');
+           
+        //    console.log(idMovie);
+        //     fetchMovieDetailsData(idMovie);
+        // }else{
+        //     console.log( 'El elemento id no está definido');
+        // }
         
         // console.log(idElement);
         //Tomar valor ID de la imagen
