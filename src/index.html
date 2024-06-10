@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-
+    <link rel="stylesheet" href="./scss/styles.scss">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap"
       rel="stylesheet"
@@ -71,12 +72,12 @@
       </div>
     </nav>
     <!-- BOTONES -->
-    <div id="list-toolbar" class="container toolbar">
-      <div
-        class="selectors_container d-flex me-1 justify-content-between align-items-center bg-light"
+    <div id="list-toolbar" class="container toolbar container-fluid">
+      <div id="selector_container"
+        class="selectors_container container-fluid d-flex w-100  me-1 justify-content-between align-items-center bg-light"
       >
         <div
-          class="toolbar-buttons m-3 d-flex justify-content-between align-items-center"
+          class="toolbar-buttons m-2 d-flex justify-content-between align-items-center"
         >
           <button type="button" class="btn" id="btn-grid">
             <img src="layout-grid.svg" width="44" height="44" alt="" />

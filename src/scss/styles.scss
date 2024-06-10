@@ -1,1 +1,67 @@
 @use "bootstrap";
+@import "./bootstrap/variables";
+
+#selectors_container {
+    width: 100%;
+    background-color: aquamarine;
+
+}
+
+#app {
+    margin: 0 auto;
+    margin-block: 5rem;
+    margin-inline: 20rem;
+    border: none;
+
+}
+
+
+// CARDS ENG GRID
+
+.card {
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    
+    .card-img-top {
+        height: 393px;
+        width: 280px;
+        
+    }
+    .card-body {
+        
+        align-self: start;
+    }
+    .card-title {
+        
+
+    }
+    .card-text {
+        
+        display: -webkit-box; 
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+    .card-rating {
+        color: $color-grey;
+    }
+}
+
+
+#card-list-mode {
+    .row {
+        border: 1px solid $color-dark;
+        border-radius: 5px;
+        .col-img {
+            padding-left: 0;
+        }
+    }
+    .card-img{
+        height: 393px;
+        width: 280px;
+}
+    
+}

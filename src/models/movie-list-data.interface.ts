@@ -4,7 +4,7 @@ export interface MovieListData {
     id: string;
     title: string;
     overview: string;
-    rate: number;
+    rate: string;
     year: number;
     poster: string;
 }
