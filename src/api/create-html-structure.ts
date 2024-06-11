@@ -142,7 +142,8 @@ function createMovieListElem(movie: MovieListData) {
 
 export function createDetailsHtmlStructure(movie: MovieDetailsData): HTMLElement {
     const containerElem = document.createElement('div');
-    containerElem.className= 'container-fluid d-flex';
+    containerElem.className= 'container container-details d-flex';
+    containerElem.setAttribute('style',`background-image: url(${movie.backdrop})`);
     const divImgElem = document.createElement('div');
     divImgElem.className= 'col-3';
     containerElem.appendChild(divImgElem);

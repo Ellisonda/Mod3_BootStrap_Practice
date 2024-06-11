@@ -1,4 +1,4 @@
-import { baseUrlImg, defaultValue } from "../../data/default";
+import { baseUrlDetailsImg, baseUrlImg, defaultValue } from "../../data/default";
 import { MovieDetailsData } from "../../models/movie-details-data.interface";
 import { MovieListData } from "../../models/movie-list-data.interface";
 
@@ -8,7 +8,7 @@ import { MovieListData } from "../../models/movie-list-data.interface";
 
 
 export function movieDetailsMapper(data: any): MovieDetailsData{
-    const {id, title, director, overview, vote_average, release_date, poster_path, credits}= data;
+    const {id, title, director, overview, vote_average, release_date, poster_path, credits, backdrop_path}= data;
     return {
         id: id ?? -1,
         title: title??defaultValue,
@@ -19,7 +19,7 @@ export function movieDetailsMapper(data: any): MovieDetailsData{
         poster: baseUrlImg+poster_path ?? defaultValue,
         cast: movieCastMapper(credits?.cast?? defaultValue),
         crew: movieCrewMapper(credits?.crew?? defaultValue),
-        backdrop:poster_path
+        backdrop:baseUrlDetailsImg+backdrop_path ?? defaultValue
     };
 }
 
