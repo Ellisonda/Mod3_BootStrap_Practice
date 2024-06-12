@@ -47,7 +47,7 @@
         -webkit-box-orient: vertical; 
         overflow: hidden; 
         text-overflow: ellipsis;
-        font-family: "Lora", serif;
+        font-family: "Raleway", sans-serif;
         font-optical-sizing: auto;
         font-style: normal;
     }
@@ -78,7 +78,7 @@
             gap: 1rem;
            .card-title {
 
-            font-size: 2rem;
+            font-size: 3rem;
            } 
         }
     }
@@ -87,7 +87,7 @@
 }
 //MODO DETAILS
 .container-details {
- justify-content: space-evenly;
+ justify-content: start;
  background-size: cover;
  background-position: center;
  background-repeat: no-repeat;
@@ -95,16 +95,52 @@
  height: 800px;
  max-width: 100%;
  align-items: center;
+
  color: white;
  position: relative;
- //background-color:rgba($color: #000000, $alpha: 0.8)
+
+ .col-img-details{
+    
+    .card-img {
+        box-shadow: 5px 5px 5px 5px black;
+        border-radius: 5px;
+        width: 60%;
+        height: 80%;
+        z-index: 2;
+     }
+ }
+ .col-movie-info {
+    flex-direction: column;
+    z-index: 2;
+    gap: 1rem;
+    align-self: flex-end;
+    margin-bottom: 10%;
+    .title {
+        font-size: 3rem;
+    }
+    .card-text {
+        font-size: 1.2rem;
+        font-family: "Raleway", sans-serif;
+        
+    }
+    .row-cast {
+        height: 4rem;
+        width: inherit;
+        .img-profile {
+            width: 90px;
+            height: 130px;
+        }
+    }
+ }
+ 
 }
 .container-details::before{
-    content: linear-gradient(transparent 0%, #00000080);
+    content: linear-gradient(transparent -60%, #00000080);
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     bottom: 0;
+    z-index: 0;
     
 }

@@ -1,6 +1,6 @@
 import { baseUrlImg, defaultValue } from "../data/default";
 import { MovieListData } from "../models/movie-list-data.interface";
-import { MovieListType } from "../models/movie-type.enum";
+
 
 
 // export function moviesMapper(moviesData: any[]): MovieListData[] {
@@ -17,7 +17,7 @@ export function movieMapper(data: any): MovieListData{
         title: title??defaultValue,
         overview: overview ?? defaultValue,
         rate:vote_average ?? defaultValue,
-        year: Number(release_date.split('-').join() ?? -1),
+        year: release_date?.split('-')?.shift() ?? -1,
         poster: poster_path ? baseUrlImg+ poster_path : '' 
     };
 }

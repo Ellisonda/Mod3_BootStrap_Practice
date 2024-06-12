@@ -15,7 +15,7 @@ export function movieDetailsMapper(data: any): MovieDetailsData{
         director: director ?? defaultValue,
         overview: overview ?? defaultValue,
         rate:vote_average ?? defaultValue,
-        year: Number(release_date.split('-').join() ?? -1),
+        year: release_date?.split('-')?.shift() ?? -1,
         poster: baseUrlImg+poster_path ?? defaultValue,
         cast: movieCastMapper(credits?.cast?? defaultValue),
         crew: movieCrewMapper(credits?.crew?? defaultValue),
@@ -23,6 +23,7 @@ export function movieDetailsMapper(data: any): MovieDetailsData{
     };
 }
 
+// year: release_date?.split('-')?.join() ?? -1,
 
 
 

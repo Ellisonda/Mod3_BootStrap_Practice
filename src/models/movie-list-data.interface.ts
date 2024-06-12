@@ -5,6 +5,6 @@ export interface MovieListData {
     title: string;
     overview: string;
     rate: string;
-    year: number;
+    year: string;
     poster: string;
 }

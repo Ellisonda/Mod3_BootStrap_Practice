@@ -2,11 +2,11 @@ export interface MovieDetailsData {
     id: string;
     title: string;
     overview: string;
-    rate: number;
+    rate: string;
     crew: MovieDetailsCrewData[];
     cast: MovieDetailsCastData[];
     director: string;
-    year: number;
+    year: string;
     poster: string;
     backdrop: string;
 }
@@ -23,3 +23,4 @@ export interface MovieDetailsCrewData {
     character: string;
     profile: string
 }
+

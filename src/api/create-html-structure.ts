@@ -122,14 +122,16 @@ function createMovieListElem(movie: MovieListData) {
     const ratingBodyElem = document.createElement('div');
     ratingBodyElem.className='card-rating-release';
     cardBodyElem.appendChild(ratingBodyElem);
+
     const rateElem= document.createElement('h6');
     rateElem.className='card-rating';
     rateElem.innerHTML=movie.rate;
     ratingBodyElem.appendChild(rateElem);
-    // const releaseElem= document.createElement('h6');
-    // releaseElem.className='card-release';
-    // rateElem.innerHTML=String(movie.year);
-    // ratingBodyElem.appendChild(releaseElem);
+
+    const releaseElem= document.createElement('h6');
+    releaseElem.className='card-release';
+    releaseElem.innerHTML=movie.year;
+    ratingBodyElem.appendChild(releaseElem);
 
     const cardTextElem = document.createElement('p');
     cardTextElem.classList.add('card-text');
@@ -145,7 +147,7 @@ export function createDetailsHtmlStructure(movie: MovieDetailsData): HTMLElement
     containerElem.className= 'container container-details d-flex';
     containerElem.setAttribute('style',`background-image: url(${movie.backdrop})`);
     const divImgElem = document.createElement('div');
-    divImgElem.className= 'col-3';
+    divImgElem.className= 'col-3 col-img-details d-flex ';
     containerElem.appendChild(divImgElem);
 
     const imgElem = document.createElement('img');
@@ -155,7 +157,7 @@ export function createDetailsHtmlStructure(movie: MovieDetailsData): HTMLElement
     divImgElem.appendChild(imgElem);
 
     const divInfoElem = document.createElement('div');
-    divInfoElem.className= 'col-6';
+    divInfoElem.className= 'col-6 d-flex col-movie-info';
     containerElem.appendChild(divInfoElem);
 
     const titleElem = document.createElement('h5');
@@ -163,15 +165,41 @@ export function createDetailsHtmlStructure(movie: MovieDetailsData): HTMLElement
     titleElem.textContent= movie.title;
     divInfoElem.appendChild(titleElem);
 
+    const ratingBodyElem = document.createElement('div');
+    ratingBodyElem.className='card-rating-release';
+    divInfoElem.appendChild(ratingBodyElem);
+
     const yearElem = document.createElement('h4');
     yearElem.classList.add('year');
-    yearElem.textContent= `${movie.year}`;
-    divInfoElem.appendChild(titleElem);
+    yearElem.textContent= movie.year;
+    ratingBodyElem.appendChild(yearElem);
+
+    const rateElem= document.createElement('h6');
+    rateElem.className='card-rating';
+    rateElem.innerHTML=movie.rate;
+    ratingBodyElem.appendChild(rateElem);
 
     const overviewElem = document.createElement('p');
     overviewElem.classList.add('card-text');
     overviewElem.textContent= movie.overview;
     divInfoElem.appendChild(overviewElem);
+
+    const castContainerElem= document.createElement('div');
+    castContainerElem.className='row row-cast';
+    // castElem.textContent= movie.cast;
+    divInfoElem.appendChild(castContainerElem);
+    const castElem= document.createElement('ol');
+    castElem.className='ol-cast';
+    castContainerElem.appendChild(castElem);
+
+    const castSingleElem= document.createElement('li');
+    castSingleElem.className='card card-cast';
+    castElem.appendChild(castSingleElem);
+
+    const castImgElem= document.createElement('img');
+    castImgElem.className='img-profile';
+    castSingleElem.appendChild(castImgElem);
+    castImgElem.setAttribute('src', `${movie.cast[1]}`);
 
     
 
